@@ -1,0 +1,402 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.Ezekiel{
+    background-image: url('image/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+}
+
+.overlay{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+}
+
+/* NAVIGATION BAR */
+
+.navigation-bar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    /* border-bottom: 1px solid #a5a4a4; */
+}
+
+/* NAVIGATION BAR LOGO */
+
+.nav-logo{
+    width: 25%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.6));
+}
+
+.nav-logo img{
+    position: relative;
+    bottom: 15px;
+    width: 90px;
+    height: 90px;
+}
+
+.nav-logo h1{
+    color: #0090c9;
+    position: relative;
+    top: 4px;
+    right: 8px;
+    font-size: 29px;
+}
+
+/* INTRODUCTION */
+
+.intro{
+    width: 100%;
+    height: 500px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-intro{
+    width: 45%;
+    height: 350px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro .sub-intro h1{
+    font-size: 80px;
+    text-align: center;
+    line-height: 100px;
+    color: rgba(255, 255, 255, 0.822);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.intro .sub-intro p{
+    font-size: 25px;
+    text-align: center;
+    color: #ffffffc9;
+    
+}
+
+/* button */
+
+.button{
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* From Uiverse.io by adamgiebl */ 
+button {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: #0090c9;
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid #0090c9;
+}
+
+button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+
+button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: #0090c9;
+}
+
+button:hover {
+    color: white;
+}
+
+button:active span::before {
+    background: #0090c9;
+}
+
+.button a{
+    text-decoration: none;
+}
+
+/* the options including: symptom checker e.t.c*/
+.big-container{
+    width: 100%;
+    height: 250px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symptom, .diagnosis, .medication, .report{
+    width: 23%;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    color: #ffffffc9;
+}
+
+.symptom:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    transition: 400ms;
+}
+
+.diagnosis:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    transition: 400ms;
+}
+
+.medication:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    transition: 400ms;
+}
+
+.report:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+
+
+.icons{
+    width: 25%;
+    height: 150px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 40px;
+}
+
+.text{
+    width: 70%;
+    height: 200px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.big-container .text h2{
+    font-size: 25px;
+    margin-bottom: 8px;
+    padding-right: 5px;
+}
+
+.big-container .text p{
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+
+/* footer */
+footer{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffffc9;
+    font-size: 18px;
+    border-top: 1px solid gray;
+}
+
+
+.nothing2{
+    height: 28%;
+}
+
+/* RESPONSIVENESS */
+
+/* TABLET SCREEN */
+
+@media (min-width: 801px) and (max-width: 1200px) {
+
+    .nav-logo img{
+        width: 75px;
+        height: 75px;
+        position: relative;
+        bottom: 10px;
+        left: 20px;
+    }
+
+    .nav-logo h1{
+        font-size: 26px;
+        position: relative;
+        left: 10px;
+        top: 5px;
+    }
+
+    .Ezekiel{
+        min-height: 100vh;
+    }
+
+    .nav-logo{
+        width: 30%;
+    }
+
+    .intro{
+        height: 600px;
+    }
+
+    .sub-intro{
+        width: 100%;
+    }
+
+    .intro .sub-intro h1{
+        font-size: 65px;
+        line-height: 70px;
+    }
+
+    .intro .sub-intro p{
+        font-size: 27px;
+    }
+
+    .big-container{
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .symptom, .diagnosis, .medication, .report{
+        width: 40%;
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+
+
+
+    footer{
+        margin-top: 100px;
+        /* 08028969116 */
+    }
+
+    footer p{
+        font-size: 23px;
+    }
+    
+}
+
+/* MOBILE SCREEN */
+
+@media (min-width:0) and (max-width: 800px) {
+    .Ezekiel{
+        min-height: 100vh;
+    }
+
+    .nav-logo{
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-logo img{
+        width: 75px;
+        height: 75px;
+        position: relative;
+        bottom: 10px;
+        left: 15px;
+    } 
+    
+    .nav-logo h1{
+        position: relative;
+        left: 2px;
+        font-size: 15px;
+        color: #0090c9;
+    }
+
+    .sub-intro{
+        width: 80%;
+    }
+
+    .intro .sub-intro h1{
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .intro .sub-intro p{
+        font-size: 20px;
+    }
+
+    .big-container{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .symptom, .diagnosis, .medication, .report{
+        width: 90%;
+        height: 170px;
+        /* height: fit-content; */
+        margin-bottom: 20px;
+    }
+
+    footer{
+        margin-top: 350px;
+    }
+
+    footer p{
+        font-size: 16px;
+    }
+}

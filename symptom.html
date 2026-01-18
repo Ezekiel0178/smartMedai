@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="symptom.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    </head>
+    <body>
+        <div class="Ezekiel">
+            <div class="overlay">
+                <div id="home" class="navigation-bar">
+
+                    <div class="nav-logo">
+
+                        <a href="index.html">
+                            <img src="image/newLogo.png" alt="">
+                        </a>
+
+                        <h1>SmartMed AI</h1>
+
+                    </div>
+
+
+                </div>
+
+                <div id="step-1" class=" step active">
+                    <h2>👋 Hello, what's your name?</h2>
+                    <!-- From Uiverse.io by Satwinder04 --> 
+                    <div class="input-container">
+                        <input type="text" placeholder="Enter your name" class="input-field" id="username" >
+                        <label for="input-field" class="input-label">Enter name</label>
+                        <span class="input-highlight"></span>
+                    </div>
+
+                    <!-- From Uiverse.io by ernestnash --> 
+
+                    <a class="btn" onclick="goToStep2()">Continue</a>
+                </div>
+
+                <div id="step-2" class="step" style="display:none;">
+
+                    <h2>Hi <span id="displayName"></span>, what symptoms are you experiencing?</h2>
+
+                    <form id="symptomForm">
+                        
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="Fever">&nbsp; Fever
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="Diarrhea">&nbsp; Diarrhea
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="Headache">&nbsp; Headache
+                            </div>
+                        </label>
+                        
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="Fatigue">&nbsp; Fatigue
+                            </div>
+                        </label>
+
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="nausea">&nbsp; Nausea
+                            </div>
+                        </label>
+
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="Abdominal-pain">&nbsp; Abodominal pain
+                            </div>
+                        </label>
+
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="Dehydration">&nbsp; Dehydration
+                            </div>
+                        </label>
+
+                        <label>
+                            <div class="symptom">
+                                <input type="checkbox" name="symptom" value="Appetite-Loss">&nbsp; Loss of Appetite
+                            </div>
+                        </label>
+
+                        <label>
+                            <div class="symptom dizzy">
+                                <input type="checkbox" name="symptom" value="Dizziness">&nbsp; Dizziness
+                            </div>
+                        </label>
+                        
+                        <a class="btn" onclick="goToStep3()">Get Diagnosis</a>
+                    </form>
+                </div>
+
+                <div id="step-3" class="step" style="display:none;"> 
+                    <div class="loader-con">
+                        <div id="loader"></div>
+                        <p id="loaderInfo"></p>
+                    </div>
+
+                </div>
+
+                <div id="step-4" class="step" style="display:none;"> 
+                    <h2>🩺 Diagnosing symptoms...</h2>
+                    <div class="sttep4">
+                        <p><strong>Hi <span id="diagnosisName"></span></strong>, based on your selected symptoms, here’s what we found:</p>
+                        <div id="diagnosisResult" class="result"></div>
+                    </div>
+
+                    <a class="btn" href="#" onclick="goToStep5()">View Final Report</a>
+                </div>
+
+                <div id="step-5" class="step" style="display:none;">  
+                    <h2>📋 Final Report for <span id="reportName"></span></h2>
+                    <!-- <div id="reportSummary"></div> -->
+                    <div id="finalReport" class="report-box"></div>
+                    <br>
+                    
+                    <p class="closingRemark">Thank you for using SmartMed AI! If you have any questions or need further assistance, feel free to reach out.</p>
+                </div>
+
+
+
+
+                <div class="nothing2"></div>
+                <footer>
+            
+                    <p>&copy; 2026 Techzeke. All rights reserved.</p>
+             
+                </footer>
+            </div>
+        </div>
+
+
+        
+        <a onclick="goToStep1()" class="floatingButton">
+            <i class="bi bi-arrow-return-left "></i>
+        </a>
+       
+
+
+        <script src="symptom.js"></script>
+    </body>
+</html>
