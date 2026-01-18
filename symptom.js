@@ -171,17 +171,20 @@ const floatingBtn = document.querySelector(".floatingButton");
 const footer = document.querySelector("footer");
 
 window.addEventListener("scroll", () => {
-    const footerRect = footer.getBoundingClientRect();
+    const footerTop = footer.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
-    if (footerRect.top < windowHeight) {
-        // Footer is entering view
-        floatingBtn.style.bottom = (windowHeight - footerRect.top + 20) + "px";
+    if (footerTop <= windowHeight) {
+        // hides the button when footer is visible
+        floatingBtn.style.opacity = "0";
+        floatingBtn.style.pointerEvents = "none";
     } else {
-        // Normal position
-        floatingBtn.style.bottom = "20px";
+        // shows the button when footer is not visible
+        floatingBtn.style.opacity = "1";
+        floatingBtn.style.pointerEvents = "auto";
     }
 });
+
 
 
 
